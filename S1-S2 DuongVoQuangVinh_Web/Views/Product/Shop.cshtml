@@ -1,24 +1,47 @@
 ﻿@model IEnumerable<S1_S2_DuongVoQuangVinh__Web__.Models.Product>
 
-<h2>Danh sách sản phẩm</h2>
+<section data-bs-version="5.1" class="content2 cid-tsEZVFGbrL" id="content2-g">
+    <div class="container">
+        <div class="mbr-section-head">
+            <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">
+                The secret to a
+                <br>perfect cup, every time...
+            </h5>
+        </div>
 
-<table class="table">
-    <tr>
-        <th>Tên</th>
-        <th>Giá</th>
-        <th>Chi tiết</th>
-        <th>Ảnh</th>
-    </tr>
+        <div class="row mt-4">
+            @foreach (var item in Model)
+            {
+                <div class="item features-image col-12 col-md-6 col-lg-4">
+                    <div class="item-wrapper">
+                        <div class="item-img">
+                            @* Hiển thị ảnh từ Model *@
+                            <img src="@item.ImageUrl" alt="Coffee Shop" title="">
+                        </div>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.Name</td>
-            <td>@item.Price</td>
-            <td>@item.Detail</td>
-            <td>
-                <img src="@item.ImageUrl" width="100" />
-            </td>
-        </tr>
-    }
-</table>
+                        <div class="item-content">
+                            @* Link đến trang Chi tiết sản phẩm dùng Tag Helper *@
+                            <a asp-controller="Products" asp-action="Detail" asp-route-id="@item.Id" target="_self">
+                                <h6 class="item-subtitle mbr-fonts-style mt-1">
+                                    @item.Name
+                                </h6>
+                            </a>
+
+                            @* Hiển thị giá và định dạng tiền tệ *@
+                            <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                                @item.Price.ToString("C")
+                            </p>
+                        </div>
+
+                        <div class="mbr-section-btn item-footer mt-2">
+                            <a href="" class="btn item-btn btn-primary display-4" target="_self">
+                                <span class="mrib-cart-add mbr-iconfont mbr-iconfont-btn"></span>
+                                Add to cart&nbsp;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

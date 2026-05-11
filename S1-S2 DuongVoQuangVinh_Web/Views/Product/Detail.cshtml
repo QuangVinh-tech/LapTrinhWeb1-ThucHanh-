@@ -1,0 +1,55 @@
+﻿@model S1_S2_DuongVoQuangVinh__Web__.Models.Product
+
+<br />
+<br />
+
+<div class="container py-5">
+    <div class="card-wrapper">
+        <div class="row align-items-center">
+
+            <div class="col-12 col-lg-6">
+                <div class="image-wrapper">
+                    <img src="@Model.ImageUrl"
+                         alt="@Model.Name"
+                         class="img-fluid"
+                         style="width: 100%; object-fit: cover;" />
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="text-box px-lg-4">
+
+                    @* Tên sản phẩm: Viết hoa, đậm, font lớn *@
+                    <h1 class="mbr-title mbr-fonts-style display-2 mb-3">
+                        <strong>@Model.Name</strong>
+                    </h1>
+
+                    @* Mô tả sản phẩm: Căn lề đều (justify) *@
+                    <p class="mbr-text mbr-fonts-style display-7 mb-4 text-muted" style="text-align: justify; line-height: 1.6;">
+                        @Model.Detail
+                    </p>
+
+                    @* Giá tiền: Kích thước lớn *@
+                    <div class="cost mb-4">
+                        <h3 class="currentcost mbr-fonts-style display-2">
+                            @Model.Price.ToString("C")
+                        </h3>
+                    </div>
+
+                    @* Nút Add to Cart: Màu nâu nhạt/vàng cát *@
+                    <div class="mbr-section-btn">
+                        <a href="#" class="btn btn-primary display-4"
+                           style="background-color: #d1a673; border-color: #d1a673; color: white; padding: 10px 30px; border-radius: 5px;">
+                            Add to cart <span class="mbrib-cart-add mbr-iconfont"></span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<br />
+<br />

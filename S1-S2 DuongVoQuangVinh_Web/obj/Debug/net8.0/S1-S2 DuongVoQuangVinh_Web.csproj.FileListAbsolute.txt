@@ -134,3 +134,4 @@ C:\Users\ASUS\source\repos\S1-S2 DuongVoQuangVinh_Web\S1-S2 DuongVoQuangVinh_Web
 C:\Users\ASUS\source\repos\S1-S2 DuongVoQuangVinh_Web\S1-S2 DuongVoQuangVinh_Web\obj\Debug\net8.0\S1-S2 DuongVoQuangVinh_Web.pdb
 C:\Users\ASUS\source\repos\S1-S2 DuongVoQuangVinh_Web\S1-S2 DuongVoQuangVinh_Web\obj\Debug\net8.0\S1-S2 DuongVoQuangVinh_Web.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\S1-S2 DuongVoQuangVinh_Web\S1-S2 DuongVoQuangVinh_Web\obj\Debug\net8.0\ref\S1-S2 DuongVoQuangVinh_Web.dll
+C:\Users\ASUS\source\repos\S1-S2 DuongVoQuangVinh_Web\S1-S2 DuongVoQuangVinh_Web\obj\Debug\net8.0\S1-S2 DuongVoQuangVinh_Web.sourcelink.json

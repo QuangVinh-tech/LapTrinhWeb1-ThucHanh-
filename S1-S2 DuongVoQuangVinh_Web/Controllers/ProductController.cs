@@ -16,9 +16,20 @@ namespace S1_S2_DuongVoQuangVinh__Web__.Controllers
 
         public IActionResult Shop()
         {
-            var products = productRepository.GetProducts();
+            var products = productRepository.GetAllProducts();
 
             return View(products);
+        }
+        public IActionResult Detail(int id)
+        {
+            var product = productRepository.GetProductDetail(id);
+
+            if (product != null)
+            {
+                return View(product);
+            }
+
+            return NotFound();
         }
     }
 

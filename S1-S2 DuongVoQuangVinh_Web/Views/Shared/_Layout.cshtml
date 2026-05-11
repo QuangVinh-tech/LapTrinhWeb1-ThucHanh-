@@ -1,49 +1,172 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - S1_S2_DuongVoQuangVinh__Web__</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/S1_S2_DuongVoQuangVinh__Web__.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">S1_S2_DuongVoQuangVinh__Web__</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - S1_S2_DuongVoQuangVinh__Web__ - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1">
+
+    <title>Coffee Shop</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="~/assets/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="~/assets/bootstrap/css/bootstrap-grid.min.css">
+
+    <link rel="stylesheet"
+          href="~/assets/bootstrap/css/bootstrap-reboot.min.css">
+
+    <link rel="stylesheet"
+          href="~/assets/theme/css/style.css">
+
+    <link rel="stylesheet"
+          href="~/assets/mobirise/css/mbr-additional.css">
+
+    <link rel="stylesheet"
+          href="~/assets/web/assets/mobirise-icons2/mobirise2.css">
+
+    <link rel="stylesheet"
+          href="~/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <section class="menu menu3">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+
+            <div class="container-fluid px-4">
+
+                <!-- LOGO -->
+
+                <a class="navbar-brand"
+                   asp-controller="Home"
+                   asp-action="Index">
+
+                    <img src="~/assets/images/coffee-icon-sign-symbol-design-free-png.webp"
+                         style="height:40px;" />
+
+                </a>
+
+                <!-- MOBILE BUTTON -->
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- MENU -->
+
+                <div class="collapse navbar-collapse justify-content-end"
+                     id="navbarNav">
+
+                    <ul class="navbar-nav align-items-center">
+
+                        <li class="nav-item mx-2">
+
+                            <a class="nav-link fw-bold text-dark"
+                               asp-controller="Home"
+                               asp-action="Index">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item mx-2">
+
+                            <a class="nav-link fw-bold text-dark"
+                               asp-controller="Product"
+                               asp-action="Shop">
+
+                                Shop
+
+                            </a>
+
+                        </li>
+
+                        <li class="nav-item mx-2">
+
+                            <a class="nav-link fw-bold text-dark"
+                               asp-controller="Home"
+                               asp-action="Privacy">
+
+                                Contact
+
+                            </a>
+
+                        </li>
+
+                        <!-- USER ICON -->
+
+                        <li class="nav-item mx-2">
+
+                            <a class="nav-link text-dark">
+
+                                <span class="mobi-mbri mobi-mbri-user-2"></span>
+
+                            </a>
+
+                        </li>
+
+                        <!-- CART ICON -->
+
+                        <li class="nav-item mx-2">
+
+                            <a class="nav-link text-dark">
+
+                                <span class="mobi-mbri mobi-mbri-shopping-bag"></span>(0)
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </section>
+
+    <!-- BODY -->
+    @RenderBody()
+
+    <!-- FOOTER -->
+
+    <footer class="text-center p-4 bg-light">
+
+        <p class="mb-0">
+
+            © 2026 Coffee Shop
+
+        </p>
+
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- JS -->
+
+    <script src="~/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/assets/theme/js/script.js"></script>
+
 </body>
+
 </html>
